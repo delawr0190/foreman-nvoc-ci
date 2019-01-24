@@ -108,9 +108,9 @@ function runTest(testCase) {
                     if (!error && response.statusCode == 200) {
                         const miners = JSON.parse(body);
                         if ((miners.length == 1) && 
-                            (miners[0].minerType == fmMinerName) && 
-                            (miners[0].apiIp == fmMinerApiIp) && 
-                            (miners[0].apiPort == fmMinerApiPort)) {
+                            (miners[0].minerType == testCase.foreman.name) && 
+                            (miners[0].apiIp == testCase.foreman.api_ip) && 
+                            (miners[0].apiPort == testCase.foreman.api_port)) {
                             callback(null, miners[0].id);
                         }
                     }
@@ -123,7 +123,7 @@ function runTest(testCase) {
             // Lazy - give it 2 minutes
             sleep.sleep(60 * 2);
             callForeman(
-                `${fmApiUrl}/miners/${fmClientId}/${fmPickaxe}/${minerId}`,
+                `${foremanApiUrl}/miners/${process.env.FOREMAN_CLIENT_ID}/${process.env.FOREMAN_PICKAXE_KEY}/${minerId}`,
                 'GET',
                 function(error, response, body) {
                     if (!error && response.statusCode == 200) {
