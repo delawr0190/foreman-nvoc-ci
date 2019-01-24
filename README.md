@@ -32,6 +32,47 @@ To test:
 
 Test results will be printed to the screen.
 
+### Sample Output ###
+
+The following output shows the successful testing of ethminer 0.15.0 and ethminer 0.16.0:
+
+```sh
+Starting test: ethminer 0.15.0
+- Stopping nvOC
+- Backing up 1bash
+- Configuring 1bash
+-- Setting 'COIN' to 'ETH'
+-- Setting 'ETH_ADDRESS' to '0x70036B326303A1253d634eBd0e7Af8591C340D6c'
+-- Setting 'ETH_POOL' to 'us1.ethermine.org'
+-- Setting 'ETH_PORT' to '4444'
+-- Setting 'ETHMINER_VERSION' to '0.15.0'
+- Purging any miners in Foreman on this pickaxe
+-- Deleting 1050
+- Starting nvOC
+- Waiting for miner to appear in Foreman
+- Waiting for miner to be seen in Foreman
+- Stopping nvOC
+- Restoring 1bash
+- PASSED
+Starting test: ethminer 0.16.0
+- Stopping nvOC
+- Backing up 1bash
+- Configuring 1bash
+-- Setting 'COIN' to 'ETH'
+-- Setting 'ETH_ADDRESS' to '0x70036B326303A1253d634eBd0e7Af8591C340D6c'
+-- Setting 'ETH_POOL' to 'us1.ethermine.org'
+-- Setting 'ETH_PORT' to '4444'
+-- Setting 'ETHMINER_VERSION' to '0.16.0'
+- Purging any miners in Foreman on this pickaxe
+-- Deleting 1050
+- Starting nvOC
+- Waiting for miner to appear in Foreman
+- Waiting for miner to be seen in Foreman
+- Stopping nvOC
+- Restoring 1bash
+- PASSED
+```
+
 ## Adding Tests ##
 
 All of the test cases are defined in `test-cases.json`.  Follow the JSON structure there to add new miner tests.
