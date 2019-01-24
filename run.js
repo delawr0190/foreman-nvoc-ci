@@ -1,16 +1,16 @@
 var colors = require('colors');
 var exec = require('child_process');
 var fs = require('fs');
-var replace = require('replace-in-file');
 var request = require('request');
+var shell = require('shelljs')
 var sleep = require('sleep');
 var waterfall = require('async-waterfall');
 
 var testSuite = require('./test-cases.json');
-var foreman = require('./foreman.json');
 
 // Setup test variables
-var nvocHome = '/home/m1/NVOC/mining';
+var nvocHome = process.env.NVOC_HOME || '/home/m1/NVOC/mining';
+var foremanApiUrl = process.env.FOREMAN_API_URL || 'https://dashboard.foreman.mn/api';
 
 function callForeman(url, method, callback) {
     const options = {
@@ -18,10 +18,14 @@ function callForeman(url, method, callback) {
         method: method,
         timeout: 30000,
         headers: {
-            'Authorization': `Token ${foreman.api_key}`
+            'Authorization': `Token ${process.env.FOREMAN_API_KEY}`
         }
     };
     request(options, callback);
+}
+
+function update1Bash(property, value) {
+    shell.sed('-i', '^' + property + '.*$', `${property}="${value}"`, `${nvocHome}/1bash`);
 }
 
 function runTest(testCase) {
@@ -38,29 +42,24 @@ function runTest(testCase) {
         },
         function(callback) {
             console.log('- Backing up 1bash');
-            original1Bash = fs.readFileSync(nvocHome);
+            original1Bash = fs.readFileSync(`${nvocHome}/1bash`);
             callback(null);
         },
         function(callback) {
             console.log('- Configuring 1bash');
+            update1Bash('FOREMAN_MONITOR', 'YES');
+            update1Bash('FOREMAN_CLIENT_ID', process.env.FOREMAN_CLIENT_ID);
+            update1Bash('FOREMAN_API_KEY', process.env.FOREMAN_API_KEY);
             testCase.config.forEach(function(property) {
                 console.log(`-- Setting '${property.key}' to '${property.value}'`);
-                try {
-                    replace.sync({
-                        files: './1bash',
-                        from: new RegExp('^' + property.key + '.*', 'i'),
-                        to: property.key + '=' + property.value
-                    });
-                } catch (error) {
-                    callback(error);
-                }
+                update1Bash(property.key, property.value);
             });
             callback(null);
         },
         function(callback) {
             console.log('- Purging any miners in Foreman on this pickaxe');
             callForeman(
-                `${foreman.api_url}/miners/${foreman.client_id}/${foreman.pickaxe_key}`,
+                `${foremanApiUrl}/miners/${process.env.FOREMAN_CLIENT_ID}/${process.env.FOREMAN_PICKAXE_KEY}`,
                 'GET',
                 function(error, response, body) {
                     if (!error && response.statusCode == 200) {
@@ -71,7 +70,7 @@ function runTest(testCase) {
                             miners.forEach(function(miner) {
                                 console.log(`-- Deleting ${miner.name}`);
                                 callForeman(
-                                    `${foreman.api_url}/miners/${foreman.client_id}/${foreman.pickaxe_key}/${miner.id}`,
+                                    `${foremanApiUrl}/miners/${process.env.FOREMAN_CLIENT_ID}/${process.env.FOREMAN_PICKAXE_KEY}/${miner.id}`,
                                     'DELETE',
                                     function(error, response, body) {
                                         if (error) {
@@ -103,7 +102,7 @@ function runTest(testCase) {
             // Lazy - give it 4 minutes
             sleep.sleep(60 * 4);
             callForeman(
-                `${foreman.api_url}/miners/${foreman.client_id}/${foreman.pickaxe_key}`,
+                `${foremanApiUrl}/miners/${process.env.FOREMAN_CLIENT_ID}/${process.env.FOREMAN_PICKAXE_KEY}`,
                 'GET',
                 function(error, response, body) {
                     if (!error && response.statusCode == 200) {

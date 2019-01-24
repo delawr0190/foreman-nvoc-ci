@@ -1,0 +1,28 @@
+[
+    {
+        "name": "ethminer 0.14.0",
+        "miner": {
+            "name": "ethminer",
+            "version": "0.14.0"
+        },
+        "foreman": {
+            "name": "ethminer",
+            "api_ip": "127.0.0.1",
+            "api_port": 1880
+        },
+        "config": [
+            {
+                "key": "ETH_ADDRESS",
+                "value": "0x70036B326303A1253d634eBd0e7Af8591C340D6c"
+            },
+            {
+                "key": "ETH_POOL",
+                "value": "us1.ethermine.org"
+            },
+            {
+                "key": "ETH_PORT",
+                "value": "4444"
+            }
+        ]
+    }
+]
