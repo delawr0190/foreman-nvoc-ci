@@ -27,7 +27,7 @@ To test:
 2. Perform an `npm install` to install testing dependencies.
 3. Set your FOREMAN_CLIENT_ID via `export FOREMAN_CLIENT_ID=<value here>`.
 4. Set your FOREMAN_API_KEY via `export FOREMAN_API_KEY=<value here>`.
-5. Set your FOREMAN_PICKAXE_KEY via `export FOREMAN_PICKAXE_KEY=<value here>`.  **Note:** you this pickaxe key should point to a pickaxe with no miners on it - during testing, miners will be added and removed, so if you don't chose an empty pickaxe, you will lose miners.
+5. Set your FOREMAN_PICKAXE_KEY via `export FOREMAN_PICKAXE_KEY=<value here>`.  **Note:** this pickaxe key should point to a pickaxe with no miners on it - during testing, miners will be added and removed, so if you don't chose an empty pickaxe, you will lose miners.
 6. Run `node run.js`.
 
 Test results will be printed to the screen.
