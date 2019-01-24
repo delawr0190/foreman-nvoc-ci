@@ -6,7 +6,7 @@ For each test that's defined, the following actions are performed:
 
 1. Configure `1bash` for the miner based on the criteria defined in the test suite.
 2. Start nvOC.
-3. Verify that a miner is created in Foreman (this implies that the miner is successfully running in nvOC).
+3. Verify that a miner is created in Foreman (this validates that the miner is successfully running in nvOC).
 4. Verify that the miner shows metrics in Foreman.
 5. Stop nvOC.
 5. Revert `1bash` to the state it was in before the test was started.
