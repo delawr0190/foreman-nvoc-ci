@@ -25,10 +25,12 @@ function callForeman(url, method, callback) {
 }
 
 function update1Bash(property, value) {
-    shell.sed('-i', '^' + property + '.*$', `${property}="${value}"`, `${nvocHome}/1bash`);
+    shell.sed('-i', '^' + property + '=.*$', `${property}="${value}"`, `${nvocHome}/1bash`);
 }
 
-function runTest(testCase) {
+function runTest(suiteIndex) {
+    testCase = testSuite[suiteIndex];
+
     var original1Bash = null;
     waterfall([
         function(callback) {
@@ -112,9 +114,12 @@ function runTest(testCase) {
                             (miners[0].apiIp == testCase.foreman.api_ip) && 
                             (miners[0].apiPort == testCase.foreman.api_port)) {
                             callback(null, miners[0].id);
+                        } else {
+                            callback(new Error('Miner never appeared in Foreman'));
                         }
+                    } else {
+                        callback(new Error('Obtained an unexpected response from Foreman'));
                     }
-                    callback(new Error('Miner never appeared in Foreman'));
                 }
             );
         },
@@ -130,9 +135,12 @@ function runTest(testCase) {
                         const miner = JSON.parse(body);
                         if (miner.seen) {
                             callback(null);
+                        } else {
+                            callback(new Error('Miner was never marked as seen'));
                         }
+                    } else {
+                        callback(new Error('Obtained an unexpected response from Foreman'));
                     }
-                    callback(new Error('Miner was never marked as seen'));
                 }
             );
         },
@@ -143,22 +151,23 @@ function runTest(testCase) {
         },
         function(callback) {
             console.log('- Restoring 1bash');
-            fs.writeFileSync('./1bash', original1Bash);
+            fs.writeFileSync(`${nvocHome}/1bash`, original1Bash);
             callback(null);
         }
     ], function (err, result) {
         if (err) {
             console.log(colors.red(`FAIL ${testCase.name}: ${err}`));
             if (original1Bash != null) {
-                fs.writeFileSync('./1bash', original1Bash);
+                fs.writeFileSync(`${nvocHome}/1bash`, original1Bash);
             }
         } else {
             console.log(colors.green(`- PASSED`));
+            if (suiteIndex + 1 < testSuite.length) {
+                runTest(suiteIndex + 1);
+            }
         }
     });
 }
 
-// Run all of the tests
-testSuite.forEach(function(test) {
-    runTest(test);
-});
+// Run all of the tests - recursive
+runTest(0);

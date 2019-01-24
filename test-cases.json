@@ -1,10 +1,158 @@
 [
     {
-        "name": "ethminer 0.14.0",
-        "miner": {
-            "name": "ethminer",
-            "version": "0.14.0"
+        "name": "bminer 10.7.0",
+        "foreman": {
+            "name": "bminer",
+            "api_ip": "127.0.0.1",
+            "api_port": 1880
         },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "ETH"
+            },
+            {
+                "key": "ETH_ADDRESS",
+                "value": "0x70036B326303A1253d634eBd0e7Af8591C340D6c"
+            },
+            {
+                "key": "ETH_POOL",
+                "value": "us1.ethermine.org"
+            },
+            {
+                "key": "ETH_PORT",
+                "value": "4444"
+            },
+            {
+                "key": "BMINER_VERSION",
+                "value": "10.7.0"
+            },
+            {
+                "key": "ETHASH_MINER",
+                "value": "BMINER"
+            },
+            {
+                "key": "ETH_POOL_PROTOCOL",
+                "value": "ethash"
+            }
+        ]
+    },
+    {
+        "name": "bminer 13.0.0",
+        "foreman": {
+            "name": "bminer",
+            "api_ip": "127.0.0.1",
+            "api_port": 1880
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "ETH"
+            },
+            {
+                "key": "ETH_ADDRESS",
+                "value": "0x70036B326303A1253d634eBd0e7Af8591C340D6c"
+            },
+            {
+                "key": "ETH_POOL",
+                "value": "us1.ethermine.org"
+            },
+            {
+                "key": "ETH_PORT",
+                "value": "4444"
+            },
+            {
+                "key": "BMINER_VERSION",
+                "value": "13.0.0"
+            },
+            {
+                "key": "ETHASH_MINER",
+                "value": "BMINER"
+            },
+            {
+                "key": "ETH_POOL_PROTOCOL",
+                "value": "ethash"
+            }
+        ]
+    },
+    {
+        "name": "claymore 11.9",
+        "foreman": {
+            "name": "claymore-eth",
+            "api_ip": "127.0.0.1",
+            "api_port": 3333
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "ETH"
+            },
+            {
+                "key": "ETH_ADDRESS",
+                "value": "0x70036B326303A1253d634eBd0e7Af8591C340D6c"
+            },
+            {
+                "key": "ETH_POOL",
+                "value": "us1.ethermine.org"
+            },
+            {
+                "key": "ETH_PORT",
+                "value": "4444"
+            },
+            {
+                "key": "CLAYMORE_VERSION",
+                "value": "11.9"
+            },
+            {
+                "key": "ETHASH_MINER",
+                "value": "CLAYMORE"
+            },
+            {
+                "key": "ETH_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    },
+    {
+        "name": "claymore 12.0",
+        "foreman": {
+            "name": "claymore-eth",
+            "api_ip": "127.0.0.1",
+            "api_port": 3333
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "ETH"
+            },
+            {
+                "key": "ETH_ADDRESS",
+                "value": "0x70036B326303A1253d634eBd0e7Af8591C340D6c"
+            },
+            {
+                "key": "ETH_POOL",
+                "value": "us1.ethermine.org"
+            },
+            {
+                "key": "ETH_PORT",
+                "value": "4444"
+            },
+            {
+                "key": "CLAYMORE_VERSION",
+                "value": "12.0"
+            },
+            {
+                "key": "ETHASH_MINER",
+                "value": "CLAYMORE"
+            },
+            {
+                "key": "ETH_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    },
+    {
+        "name": "ethminer 0.14.0",
         "foreman": {
             "name": "ethminer",
             "api_ip": "127.0.0.1",
@@ -26,6 +174,170 @@
             {
                 "key": "ETH_PORT",
                 "value": "4444"
+            },
+            {
+                "key": "ETHMINER_VERSION",
+                "value": "0.14.0"
+            },
+            {
+                "key": "ETHASH_MINER",
+                "value": "ETHMINER"
+            },
+            {
+                "key": "ETH_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    },
+    {
+        "name": "ethminer 0.15.0",
+        "foreman": {
+            "name": "ethminer",
+            "api_ip": "127.0.0.1",
+            "api_port": 3333
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "ETH"
+            },
+            {
+                "key": "ETH_ADDRESS",
+                "value": "0x70036B326303A1253d634eBd0e7Af8591C340D6c"
+            },
+            {
+                "key": "ETH_POOL",
+                "value": "us1.ethermine.org"
+            },
+            {
+                "key": "ETH_PORT",
+                "value": "4444"
+            },
+            {
+                "key": "ETHMINER_VERSION",
+                "value": "0.15.0"
+            },
+            {
+                "key": "ETHASH_MINER",
+                "value": "ETHMINER"
+            },
+            {
+                "key": "ETH_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    },
+    {
+        "name": "ethminer 0.16.0",
+        "foreman": {
+            "name": "ethminer",
+            "api_ip": "127.0.0.1",
+            "api_port": 3333
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "ETH"
+            },
+            {
+                "key": "ETH_ADDRESS",
+                "value": "0x70036B326303A1253d634eBd0e7Af8591C340D6c"
+            },
+            {
+                "key": "ETH_POOL",
+                "value": "us1.ethermine.org"
+            },
+            {
+                "key": "ETH_PORT",
+                "value": "4444"
+            },
+            {
+                "key": "ETHMINER_VERSION",
+                "value": "0.16.0"
+            },
+            {
+                "key": "ETHASH_MINER",
+                "value": "ETHMINER"
+            },
+            {
+                "key": "ETH_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    },
+    {
+        "name": "phoenix 3.5d",
+        "foreman": {
+            "name": "phoenix",
+            "api_ip": "127.0.0.1",
+            "api_port": 3333
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "ETH"
+            },
+            {
+                "key": "ETH_ADDRESS",
+                "value": "0x70036B326303A1253d634eBd0e7Af8591C340D6c"
+            },
+            {
+                "key": "ETH_POOL",
+                "value": "us1.ethermine.org"
+            },
+            {
+                "key": "ETH_PORT",
+                "value": "4444"
+            },
+            {
+                "key": "PhoenixMiner_VERSION",
+                "value": "3.5d"
+            },
+            {
+                "key": "ETHASH_MINER",
+                "value": "PhoenixMiner"
+            },
+            {
+                "key": "ETH_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    },
+    {
+        "name": "zenemy 1.28",
+        "foreman": {
+            "name": "z-enemy",
+            "api_ip": "127.0.0.1",
+            "api_port": 4068
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "RVN"
+            },
+            {
+                "key": "RVN_ADDRESS",
+                "value": "RM5NwJiZ6aRbGTSpVomo4qCDnCmXh7Zbmk"
+            },
+            {
+                "key": "RVN_POOL",
+                "value": "pool.minermore.com"
+            },
+            {
+                "key": "RVN_PORT",
+                "value": "4501"
+            },
+            {
+                "key": "ZENEMYminer_VERSION",
+                "value": "1.28"
+            },
+            {
+                "key": "X16R_MINER",
+                "value": "ZENEMYminer"
+            },
+            {
+                "key": "RVN_POOL_PROTOCOL",
+                "value": "stratum+tcp"
             }
         ]
     }
