@@ -1,0 +1,40 @@
+[
+    {
+        "name": "dstm 0.6.2",
+        "foreman": {
+            "name": "dstm",
+            "api_ip": "127.0.0.1",
+            "api_port": 2222
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "ZEC"
+            },
+            {
+                "key": "ZEC_ADDRESS",
+                "value": "t1cJm4NdiMrj8KiiFejg8qzYrDZuMUDNo6N"
+            },
+            {
+                "key": "ZEC_POOL",
+                "value": "us-zec.2miners.com"
+            },
+            {
+                "key": "ZEC_PORT",
+                "value": "1010"
+            },
+            {
+                "key": "DSTM_VERSION",
+                "value": "0.6.2"
+            },
+            {
+                "key": "EQUIHASH_MINER",
+                "value": "DSTM"
+            },
+            {
+                "key": "ZEC_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    }
+]

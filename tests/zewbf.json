@@ -1,0 +1,40 @@
+[
+    {
+        "name": "zewbf 0.6",
+        "foreman": {
+            "name": "ewbf",
+            "api_ip": "127.0.0.1",
+            "api_port": 42000
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "BTG"
+            },
+            {
+                "key": "BTG_ADDRESS",
+                "value": "GeabJxt4nQpq3VWJx8mnNq2P1naVXyWMQx"
+            },
+            {
+                "key": "BTG_POOL",
+                "value": "us-btg.2miners.com"
+            },
+            {
+                "key": "BTG_PORT",
+                "value": "4040"
+            },
+            {
+                "key": "Z_EWBF_VERSION",
+                "value": "0.6"
+            },
+            {
+                "key": "ZHASH_MINER",
+                "value": "Z_EWBF"
+            },
+            {
+                "key": "BTG_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    }
+]

@@ -1,9 +1,14 @@
 [
     "bminer",
     "claymore",
+    "cryptodredge",
+    "dstm",
     "ethminer",
+    "ewbf",
     "gminer",
+    "lolminer",
     "phoenix",
     "trex",
-    "zenemy"
+    "zenemy",
+    "zewbf"
 ]

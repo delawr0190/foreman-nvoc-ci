@@ -1,0 +1,40 @@
+[
+    {
+        "name": "ewbf 0.3.4b",
+        "foreman": {
+            "name": "ewbf",
+            "api_ip": "127.0.0.1",
+            "api_port": 42000
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "ZEC"
+            },
+            {
+                "key": "ZEC_ADDRESS",
+                "value": "t1cJm4NdiMrj8KiiFejg8qzYrDZuMUDNo6N"
+            },
+            {
+                "key": "ZEC_POOL",
+                "value": "us-zec.2miners.com"
+            },
+            {
+                "key": "ZEC_PORT",
+                "value": "1010"
+            },
+            {
+                "key": "EWBF_VERSION",
+                "value": "0.3.4b"
+            },
+            {
+                "key": "EQUIHASH_MINER",
+                "value": "EWBF"
+            },
+            {
+                "key": "ZEC_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    }
+]
