@@ -1,6 +1,7 @@
 [
     {
         "name": "ewbf 0.3.4b",
+        "cuda": "9.2",
         "foreman": {
             "name": "ewbf",
             "api_ip": "127.0.0.1",

@@ -1,6 +1,7 @@
 [
     {
         "name": "trex 0.8.8",
+        "cuda": "9.2",
         "foreman": {
             "name": "trex",
             "api_ip": "127.0.0.1",

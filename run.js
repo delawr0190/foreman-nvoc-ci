@@ -7,6 +7,7 @@ var sleep = require('sleep');
 var waterfall = require('async-waterfall');
 
 // Setup test variables
+var cudaHome = process.env.CUDA_HOME || '/usr/local/cuda';
 var nvocHome = process.env.NVOC_HOME || '/home/m1/NVOC/mining';
 var foremanApiUrl = process.env.FOREMAN_API_URL || 'https://dashboard.foreman.mn/api';
 
@@ -55,6 +56,12 @@ function runTest(tests, index) {
                 update1Bash(property.key, property.value);
             });
             callback(null);
+        },
+        function(callback) {
+            console.log(`- Switching to cuda-${testCase.cuda}`);
+            shell.exec(`sudo rm ${cudaHome}`);
+            shell.exec(`sudo ln -s ${cudaHome}-${testCase.cuda} ${cudaHome}`);
+            callback(null); 
         },
         function(callback) {
             console.log('- Purging any miners in Foreman on this pickaxe');
@@ -151,10 +158,18 @@ function runTest(tests, index) {
             console.log('- Restoring 1bash');
             fs.writeFileSync(`${nvocHome}/1bash`, original1Bash);
             callback(null);
+        },
+        function(callback) {
+            console.log('- Restoring cuda link');
+            shell.exec(`sudo rm ${cudaHome}`);
+            shell.exec(`sudo ln -s ${cudaHome}-9.2 ${cudaHome}`);
+            callback(null);
         }
     ], function (err, result) {
         if (err) {
             console.log(colors.red(`FAIL ${testCase.name}: ${err}`));
+            shell.exec(`sudo rm ${cudaHome}`);
+            shell.exec(`sudo ln -s ${cudaHome}-9.2 ${cudaHome}`);
             if (original1Bash != null) {
                 fs.writeFileSync(`${nvocHome}/1bash`, original1Bash);
             }

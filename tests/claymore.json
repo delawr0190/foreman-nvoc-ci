@@ -1,6 +1,7 @@
 [
     {
         "name": "claymore 11.9",
+        "cuda": "9.2",
         "foreman": {
             "name": "claymore-eth",
             "api_ip": "127.0.0.1",

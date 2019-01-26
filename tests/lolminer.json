@@ -1,6 +1,7 @@
 [
     {
         "name": "lolminer 0.43",
+        "cuda": "9.2",
         "foreman": {
             "name": "lolminer",
             "api_ip": "127.0.0.1",

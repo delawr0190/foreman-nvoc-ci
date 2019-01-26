@@ -1,6 +1,7 @@
 [
     {
         "name": "zenemy 1.28",
+        "cuda": "9.2",
         "foreman": {
             "name": "z-enemy",
             "api_ip": "127.0.0.1",

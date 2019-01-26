@@ -1,6 +1,7 @@
 [
     {
         "name": "bminer 10.7.0",
+        "cuda": "9.2",
         "foreman": {
             "name": "bminer",
             "api_ip": "127.0.0.1",

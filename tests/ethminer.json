@@ -1,6 +1,7 @@
 [
     {
         "name": "ethminer 0.14.0",
+        "cuda": "9.2",
         "foreman": {
             "name": "ethminer",
             "api_ip": "127.0.0.1",

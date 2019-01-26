@@ -1,6 +1,7 @@
 [
     {
         "name": "phoenix 3.5d",
+        "cuda": "9.2",
         "foreman": {
             "name": "phoenix",
             "api_ip": "127.0.0.1",

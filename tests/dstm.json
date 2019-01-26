@@ -1,6 +1,7 @@
 [
     {
         "name": "dstm 0.6.2",
+        "cuda": "9.2",
         "foreman": {
             "name": "dstm",
             "api_ip": "127.0.0.1",

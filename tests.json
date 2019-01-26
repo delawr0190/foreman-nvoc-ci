@@ -1,4 +1,6 @@
 [
+    "anxccminer",
+    "asccminer",
     "bminer",
     "claymore",
     "cryptodredge",
@@ -7,7 +9,9 @@
     "ewbf",
     "gminer",
     "lolminer",
+    "msftccminer",
     "phoenix",
+    "spccminer",
     "trex",
     "zenemy",
     "zewbf"
