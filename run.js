@@ -6,8 +6,6 @@ var shell = require('shelljs')
 var sleep = require('sleep');
 var waterfall = require('async-waterfall');
 
-var testSuite = require('./test-cases.json');
-
 // Setup test variables
 var nvocHome = process.env.NVOC_HOME || '/home/m1/NVOC/mining';
 var foremanApiUrl = process.env.FOREMAN_API_URL || 'https://dashboard.foreman.mn/api';
@@ -28,8 +26,8 @@ function update1Bash(property, value) {
     shell.sed('-i', '^' + property + '=.*$', `${property}="${value}"`, `${nvocHome}/1bash`);
 }
 
-function runTest(suiteIndex) {
-    testCase = testSuite[suiteIndex];
+function runTest(tests, index) {
+    testCase = tests[index];
 
     var original1Bash = null;
     waterfall([
@@ -162,12 +160,20 @@ function runTest(suiteIndex) {
             }
         } else {
             console.log(colors.green(`- PASSED`));
-            if (suiteIndex + 1 < testSuite.length) {
-                runTest(suiteIndex + 1);
+            if (index + 1 < tests.length) {
+                runTest(tests, index + 1);
             }
         }
     });
 }
 
+// Merge together the tests to be ran
+var tests = [];
+var testSuite = require('./tests.json');
+testSuite.forEach(function(suite) {
+    tests.push(...require(`./tests/${suite}`));
+});
+
 // Run all of the tests - recursive
-runTest(0);
+console.log(tests.length + ' tests will be run!');
+runTest(tests, 0);
