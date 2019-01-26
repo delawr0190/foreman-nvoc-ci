@@ -75,7 +75,7 @@ Starting test: ethminer 0.16.0
 
 ## Adding Tests ##
 
-All of the test cases are defined in `test-cases.json`.  Follow the JSON structure there to add new miner tests.
+The test suites to run are found in `tests.json`.  The descriptor for each suite is located in `tests/<miner_name>.json`.  Follow the JSON structure there to add new miner tests.
 
 ## License ##
 
