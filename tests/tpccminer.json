@@ -1,0 +1,37 @@
+[
+    {
+        "name": "tpccminer 2.3",
+        "cuda": "9.2",
+        "foreman": {
+            "name": "ccminer-tpruvot",
+            "api_ip": "127.0.0.1",
+            "api_port": 4068
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "RVN"
+            },
+            {
+                "key": "RVN_ADDRESS",
+                "value": "RM5NwJiZ6aRbGTSpVomo4qCDnCmXh7Zbmk"
+            },
+            {
+                "key": "RVN_POOL",
+                "value": "pool.minermore.com"
+            },
+            {
+                "key": "RVN_PORT",
+                "value": "4501"
+            },
+            {
+                "key": "X16R_MINER",
+                "value": "TPccminer"
+            },
+            {
+                "key": "RVN_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    }
+]

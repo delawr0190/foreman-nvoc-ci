@@ -40,6 +40,7 @@
     },
     {
         "name": "ethminer 0.15.0",
+        "cuda": "9.2",
         "foreman": {
             "name": "ethminer",
             "api_ip": "127.0.0.1",
@@ -78,6 +79,7 @@
     },
     {
         "name": "ethminer 0.16.0",
+        "cuda": "9.2",
         "foreman": {
             "name": "ethminer",
             "api_ip": "127.0.0.1",

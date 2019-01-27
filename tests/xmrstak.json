@@ -1,0 +1,37 @@
+[
+    {
+        "name": "xmrstak 2.5.1",
+        "cuda": "9.2",
+        "foreman": {
+            "name": "xmrstak",
+            "api_ip": "127.0.0.1",
+            "api_port": 3333
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "XMR"
+            },
+            {
+                "key": "XMR_ADDRESS",
+                "value": "4B1hCWuXLRh5HRts6qzB88MnDgCC6JoPk9LNtkWSf9whL7it1CVXWXmjh5AheEEDzHC7PSDm5VKiL8pG4jJD9Y7vGJuxexC"
+            },
+            {
+                "key": "XMR_POOL",
+                "value": "xmr.2miners.com"
+            },
+            {
+                "key": "XMR_PORT",
+                "value": "2222"
+            },
+            {
+                "key": "CRYPTONIGHTV8_MINER",
+                "value": "XMR_Stak"
+            },
+            {
+                "key": "XMR_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    }
+]
