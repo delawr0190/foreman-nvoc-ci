@@ -1,6 +1,6 @@
 [
     {
-        "name": "xmrstak 2.5.1",
+        "name": "xmrstak 2.5.2",
         "cuda": "9.2",
         "foreman": {
             "name": "xmrstak",

@@ -40,6 +40,7 @@
     },
     {
         "name": "cryptodredge 0.16.1",
+        "cuda": "9.2",
         "foreman": {
             "name": "cryptodredge",
             "api_ip": "127.0.0.1",
@@ -72,6 +73,45 @@
             },
             {
                 "key": "RVN_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    },
+    {
+        "name": "cryptodredge 0.16.1 - phi",
+        "cuda": "9.2",
+        "foreman": {
+            "name": "cryptodredge",
+            "api_ip": "127.0.0.1",
+            "api_port": 4068
+        },
+        "config": [
+            {
+                "key": "COIN",
+                "value": "LUX"
+            },
+            {
+                "key": "LUX_ADDRESS",
+                "value": "LfHCytPpnNHXZx6D1URw89xSqR2jfgxjZs"
+            },
+            {
+                "key": "LUX_POOL",
+                "value": "us.bsod.pw"
+            },
+            {
+                "key": "LUX_PORT",
+                "value": "11518"
+            },
+            {
+                "key": "CryptoDredge_VERSION",
+                "value": "0.16.1"
+            },
+            {
+                "key": "PHI2_MINER",
+                "value": "CryptoDredge"
+            },
+            {
+                "key": "LUX_POOL_PROTOCOL",
                 "value": "stratum+tcp"
             }
         ]
