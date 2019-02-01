@@ -9,6 +9,22 @@
         },
         "config": [
             {
+                "key": "AUTO_START_MINER",
+                "value": "YES"
+            },
+            {
+                "key": "LOCALorREMOTE",
+                "value": "REMOTE"
+            },
+            {
+                "key": "AUTO_WORKERNAME",
+                "value": "CUSTOM"
+            },
+            {
+                "key": "CUSTOM_WORKERNAME",
+                "value": "nvOC-test"
+            },
+            {
                 "key": "COIN",
                 "value": "RVN"
             },
@@ -40,12 +56,29 @@
     },
     {
         "name": "trex 0.9.1",
+        "cuda": "9.2",
         "foreman": {
             "name": "trex",
             "api_ip": "127.0.0.1",
             "api_port": 4067
         },
         "config": [
+            {
+                "key": "AUTO_START_MINER",
+                "value": "YES"
+            },
+            {
+                "key": "LOCALorREMOTE",
+                "value": "REMOTE"
+            },
+            {
+                "key": "AUTO_WORKERNAME",
+                "value": "CUSTOM"
+            },
+            {
+                "key": "CUSTOM_WORKERNAME",
+                "value": "nvOC-test"
+            },
             {
                 "key": "COIN",
                 "value": "RVN"

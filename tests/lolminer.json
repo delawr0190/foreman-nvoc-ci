@@ -1,6 +1,6 @@
 [
     {
-        "name": "lolminer 0.43",
+        "name": "lolminer 0.6",
         "cuda": "9.2",
         "foreman": {
             "name": "lolminer",
@@ -8,6 +8,22 @@
             "api_port": 9999
         },
         "config": [
+            {
+                "key": "AUTO_START_MINER",
+                "value": "YES"
+            },
+            {
+                "key": "LOCALorREMOTE",
+                "value": "REMOTE"
+            },
+            {
+                "key": "AUTO_WORKERNAME",
+                "value": "CUSTOM"
+            },
+            {
+                "key": "CUSTOM_WORKERNAME",
+                "value": "nvOC-test"
+            },
             {
                 "key": "COIN",
                 "value": "BTG"
@@ -26,7 +42,7 @@
             },
             {
                 "key": "LOLMINER_VERSION",
-                "value": "0.43"
+                "value": "0.6"
             },
             {
                 "key": "ZHASH_MINER",

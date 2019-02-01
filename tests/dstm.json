@@ -9,6 +9,22 @@
         },
         "config": [
             {
+                "key": "AUTO_START_MINER",
+                "value": "YES"
+            },
+            {
+                "key": "LOCALorREMOTE",
+                "value": "REMOTE"
+            },
+            {
+                "key": "AUTO_WORKERNAME",
+                "value": "CUSTOM"
+            },
+            {
+                "key": "CUSTOM_WORKERNAME",
+                "value": "nvOC-test"
+            },
+            {
                 "key": "COIN",
                 "value": "ZEC"
             },

@@ -9,6 +9,22 @@
         },
         "config": [
             {
+                "key": "AUTO_START_MINER",
+                "value": "YES"
+            },
+            {
+                "key": "LOCALorREMOTE",
+                "value": "REMOTE"
+            },
+            {
+                "key": "AUTO_WORKERNAME",
+                "value": "CUSTOM"
+            },
+            {
+                "key": "CUSTOM_WORKERNAME",
+                "value": "nvOC-test"
+            },
+            {
                 "key": "COIN",
                 "value": "BTG"
             },
@@ -27,6 +43,61 @@
             {
                 "key": "GMINER_VERSION",
                 "value": "1.15"
+            },
+            {
+                "key": "ZHASH_MINER",
+                "value": "GMINER"
+            },
+            {
+                "key": "BTG_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    },
+    {
+        "name": "gminer 1.25",
+        "cuda": "9.2",
+        "foreman": {
+            "name": "gminer",
+            "api_ip": "127.0.0.1",
+            "api_port": 10555
+        },
+        "config": [
+            {
+                "key": "AUTO_START_MINER",
+                "value": "YES"
+            },
+            {
+                "key": "LOCALorREMOTE",
+                "value": "REMOTE"
+            },
+            {
+                "key": "AUTO_WORKERNAME",
+                "value": "CUSTOM"
+            },
+            {
+                "key": "CUSTOM_WORKERNAME",
+                "value": "nvOC-test"
+            },
+            {
+                "key": "COIN",
+                "value": "BTG"
+            },
+            {
+                "key": "BTG_ADDRESS",
+                "value": "GeabJxt4nQpq3VWJx8mnNq2P1naVXyWMQx"
+            },
+            {
+                "key": "BTG_POOL",
+                "value": "us-btg.2miners.com"
+            },
+            {
+                "key": "BTG_PORT",
+                "value": "4040"
+            },
+            {
+                "key": "GMINER_VERSION",
+                "value": "1.25"
             },
             {
                 "key": "ZHASH_MINER",
