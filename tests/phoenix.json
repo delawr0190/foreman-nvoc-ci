@@ -1,6 +1,6 @@
 [
     {
-        "name": "phoenix 3.5d",
+        "name": "phoenix 4.1c",
         "cuda": "9.2",
         "foreman": {
             "name": "phoenix",
@@ -42,7 +42,7 @@
             },
             {
                 "key": "PhoenixMiner_VERSION",
-                "value": "3.5d"
+                "value": "4.1c"
             },
             {
                 "key": "ETHASH_MINER",
