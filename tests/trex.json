@@ -1,60 +1,5 @@
 [
     {
-        "name": "trex 0.8.8",
-        "cuda": "9.2",
-        "foreman": {
-            "name": "trex",
-            "api_ip": "127.0.0.1",
-            "api_port": 4067
-        },
-        "config": [
-            {
-                "key": "AUTO_START_MINER",
-                "value": "YES"
-            },
-            {
-                "key": "LOCALorREMOTE",
-                "value": "REMOTE"
-            },
-            {
-                "key": "AUTO_WORKERNAME",
-                "value": "CUSTOM"
-            },
-            {
-                "key": "CUSTOM_WORKERNAME",
-                "value": "nvOC-test"
-            },
-            {
-                "key": "COIN",
-                "value": "RVN"
-            },
-            {
-                "key": "RVN_ADDRESS",
-                "value": "RM5NwJiZ6aRbGTSpVomo4qCDnCmXh7Zbmk"
-            },
-            {
-                "key": "RVN_POOL",
-                "value": "pool.minermore.com"
-            },
-            {
-                "key": "RVN_PORT",
-                "value": "4501"
-            },
-            {
-                "key": "T_REX_VERSION",
-                "value": "0.8.8"
-            },
-            {
-                "key": "X16R_MINER",
-                "value": "T_Rex"
-            },
-            {
-                "key": "RVN_POOL_PROTOCOL",
-                "value": "stratum+tcp"
-            }
-        ]
-    },
-    {
         "name": "trex 0.9.1",
         "cuda": "9.2",
         "foreman": {
@@ -98,6 +43,61 @@
             {
                 "key": "T_REX_VERSION",
                 "value": "0.9.1"
+            },
+            {
+                "key": "X16R_MINER",
+                "value": "T_Rex"
+            },
+            {
+                "key": "RVN_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
+    },
+    {
+        "name": "trex 0.9.2",
+        "cuda": "9.2",
+        "foreman": {
+            "name": "trex",
+            "api_ip": "127.0.0.1",
+            "api_port": 4067
+        },
+        "config": [
+            {
+                "key": "AUTO_START_MINER",
+                "value": "YES"
+            },
+            {
+                "key": "LOCALorREMOTE",
+                "value": "REMOTE"
+            },
+            {
+                "key": "AUTO_WORKERNAME",
+                "value": "CUSTOM"
+            },
+            {
+                "key": "CUSTOM_WORKERNAME",
+                "value": "nvOC-test"
+            },
+            {
+                "key": "COIN",
+                "value": "RVN"
+            },
+            {
+                "key": "RVN_ADDRESS",
+                "value": "RM5NwJiZ6aRbGTSpVomo4qCDnCmXh7Zbmk"
+            },
+            {
+                "key": "RVN_POOL",
+                "value": "pool.minermore.com"
+            },
+            {
+                "key": "RVN_PORT",
+                "value": "4501"
+            },
+            {
+                "key": "T_REX_VERSION",
+                "value": "0.9.2"
             },
             {
                 "key": "X16R_MINER",
