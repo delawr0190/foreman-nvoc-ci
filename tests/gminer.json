@@ -33,10 +33,6 @@
                 "value": "GeabJxt4nQpq3VWJx8mnNq2P1naVXyWMQx"
             },
             {
-                "key": "BTG_OPTS",
-                "value": ""
-            }.
-            {
                 "key": "BTG_POOL",
                 "value": "us-btg.2miners.com"
             },
@@ -91,10 +87,6 @@
                 "key": "BTG_ADDRESS",
                 "value": "GeabJxt4nQpq3VWJx8mnNq2P1naVXyWMQx"
             },
-            {
-                "key": "BTG_OPTS",
-                "value": ""
-            }.
             {
                 "key": "BTG_POOL",
                 "value": "us-btg.2miners.com"

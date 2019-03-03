@@ -108,5 +108,61 @@
                 "value": "ethash"
             }
         ]
+    },
+    {
+        "name": "bminer 15.1.0",
+        "cuda": "9.2",
+        "foreman": {
+            "name": "bminer",
+            "api_ip": "127.0.0.1",
+            "api_port": 1880
+        },
+        "config": [
+            {
+                "key": "AUTO_START_MINER",
+                "value": "YES"
+            },
+            {
+                "key": "LOCALorREMOTE",
+                "value": "REMOTE"
+            },
+            {
+                "key": "AUTO_WORKERNAME",
+                "value": "CUSTOM"
+            },
+            {
+                "key": "CUSTOM_WORKERNAME",
+                "value": "nvOC-test"
+            },
+            {
+                "key": "COIN",
+                "value": "ETH"
+            },
+            {
+                "key": "ETH_ADDRESS",
+                "value": "0x70036B326303A1253d634eBd0e7Af8591C340D6c"
+            },
+            {
+                "key": "ETH_POOL",
+                "value": "us1.ethermine.org"
+            },
+            {
+                "key": "ETH_PORT",
+                "value": "4444"
+            },
+            {
+                "key": "BMINER_VERSION",
+                "value": "15.1.0"
+            },
+            {
+                "key": "ETHASH_MINER",
+                "value": "BMINER"
+            },
+            {
+                "key": "ETH_POOL_PROTOCOL",
+                "value": "ethash"
+            }
+        ]
     }
+
 ]

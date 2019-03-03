@@ -53,5 +53,60 @@
                 "value": "stratum+tcp"
             }
         ]
+    },
+    {
+        "name": "lolminer 0.7",
+        "cuda": "9.2",
+        "foreman": {
+            "name": "lolminer",
+            "api_ip": "127.0.0.1",
+            "api_port": 9999
+        },
+        "config": [
+            {
+                "key": "AUTO_START_MINER",
+                "value": "YES"
+            },
+            {
+                "key": "LOCALorREMOTE",
+                "value": "REMOTE"
+            },
+            {
+                "key": "AUTO_WORKERNAME",
+                "value": "CUSTOM"
+            },
+            {
+                "key": "CUSTOM_WORKERNAME",
+                "value": "nvOC-test"
+            },
+            {
+                "key": "COIN",
+                "value": "BTG"
+            },
+            {
+                "key": "BTG_ADDRESS",
+                "value": "GeabJxt4nQpq3VWJx8mnNq2P1naVXyWMQx"
+            },
+            {
+                "key": "BTG_POOL",
+                "value": "us-btg.2miners.com"
+            },
+            {
+                "key": "BTG_PORT",
+                "value": "4040"
+            },
+            {
+                "key": "LOLMINER_VERSION",
+                "value": "0.7"
+            },
+            {
+                "key": "ZHASH_MINER",
+                "value": "LOLMINER"
+            },
+            {
+                "key": "BTG_POOL_PROTOCOL",
+                "value": "stratum+tcp"
+            }
+        ]
     }
 ]
